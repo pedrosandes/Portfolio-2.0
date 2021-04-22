@@ -1,11 +1,16 @@
 /*  RESET
  *  VARIÁVEIS
- *  ESTILOS GERAIS
+ *
+ *  HEADER
+ *  HOME
+ *  SOBRE
+ *  PORTFOLIO
+ *  CONTATO
+ *  FOOTER
 */
 
-/* 
-  VARIÁVEIS
-*/
+/* VARIÁVEIS */
+
 // VALUES
 $init: initial;
 
@@ -26,9 +31,10 @@ $font-xl: 3rem; // 48px
   //CENTRALIZA O CONTAINER
   width: 100%;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
 }
 
+// LINES
 .lines::after {
   content: '';
   display: block;
@@ -98,28 +104,29 @@ a {
 .header {
   @include flexbox(row, space-between, center);
   @include center;
-  height: 100px;
+  max-height: 200px;
+  margin: 20px auto 0 auto;
 
   @media (max-width: 679px) {
     display: block;
-
+    margin: 0;
     &-bg {
       @include flexbox(row, center, center);
       background-color: $gray;
-      min-height: 100px;
+      height: 100px;
     }
   }
 }
 
 .menu {
   &__list {
-    @include flexbox(row, center, $init); // BASTA INCLUIR DISPLAY: FLEX;
+    @include flexbox($init, center, $init);
   }
 
   &__item {
     display: flex;
     align-items: center;
-    height: 80px;
+    min-height: 80px;
   }
   &__link {
     @include fonts('Antonio', $font-sm, 500);
@@ -144,36 +151,28 @@ a {
 .home {
   @include flexbox(row, space-between, center);
   @include center();
-  margin: 80px auto;
+  padding: 80px 0;
 
   @media (max-width: 679px) {
-    @include flexbox(column-reverse, center, center);
+    @include flexbox(column-reverse, $init, center);
     background-color: $gray;
-    padding: 80px 0;
   }
 }
 
 .profile {
   max-width: 500px;
-  min-width: 250px;
 
   &__img {
     max-width: 100%;
   }
 
-  @media (max-width: 679px) {
-    max-width: 350px;
-  }
-
   @media (max-width: 476px) {
-    max-width: 300px;
+    width: 260px;
   }
 }
 
 .intro {
-  // background-color: blue;
   max-width: 432px;
-  min-width: 432px;
 
   &__title {
     @include fonts('Fira Mono', $font-xl, bold);
@@ -205,10 +204,9 @@ a {
   }
 
   @media (max-width: 679px) {
-    min-width: $init;
     max-width: $init;
     text-align: center;
-    margin: 0 30px;
+    margin: 0 20px;
 
     &__title {
       font-size: $font-md;
@@ -247,7 +245,6 @@ a {
   &__text {
     @include fonts('Fira Code', $font-sm, 400);
     line-height: 27.5px;
-    margin: 22px 0 22px 0;
 
     &:last-child {
       margin: 0;
@@ -260,11 +257,76 @@ a {
       line-height: 39.78px;
     }
   }
+}
 
-  @media (max-width: 476px) {
-    &__title {
-      font-size: 1.625rem;
-      line-height: 42.84px;
+/* PORTFÓLIO */
+
+.portfolio {
+  @include center();
+  padding: 20px;
+}
+
+.card-c {
+  @include flexbox(row, space-evenly, center);
+  flex-wrap: wrap;
+
+  &__card {
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: $blue;
+    margin-bottom: 50px;
+
+    @media (max-width: 439px) {
+      width: 250px;
+      height: 250px;
     }
+  }
+}
+
+/* CONTATO */
+
+.contato {
+  @include center();
+  max-width: 700px;
+  margin: 30px auto 100px auto;
+}
+
+.redes {
+  @include flexbox(row, space-evenly, center);
+  flex-wrap: wrap;
+
+  @media (max-width: 439px) {
+    flex-direction: column;
+    &__icon {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  @include flexbox(row, $init, center);
+  @include center();
+  height: 100px;
+
+  &-bg {
+    background-color: $gray;
+  }
+
+  @media (max-width: 679px) {
+    flex-direction: column;
+    height: 100%;
+    &-bg {
+      height: 200px;
+      padding: 20px 0;
+    }
+  }
+
+  .logo,
+  .direitos,
+  .email {
+    @include flexbox(column, center, $init);
+    flex: 1;
   }
 }
