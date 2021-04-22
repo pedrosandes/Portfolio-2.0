@@ -97,7 +97,7 @@ a {
   }
 
   .menu__list {
-    @include flexbox($init, $init, $init);
+    @include flexbox($init, $init, $init); // BASTA INCLUIR DISPLAY: FLEX;
 
     .menu__link {
       @include fonts('Antonio', $font-sm, 500);
