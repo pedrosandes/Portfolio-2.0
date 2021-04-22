@@ -91,10 +91,8 @@ a {
 }
 
 .menu {
-  @media (max-width: 679px) {
-    @include flexbox(row, center, center);
-    height: 70px;
-  }
+  @include flexbox(row, center, center);
+  height: 70px;
 
   .menu__list {
     @include flexbox($init, $init, $init); // BASTA INCLUIR DISPLAY: FLEX;
