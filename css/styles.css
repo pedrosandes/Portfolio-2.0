@@ -104,6 +104,16 @@ a {
   margin: auto;
   margin: 80px auto;
 }
+@media (max-width: 679px) {
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 80px 0;
+  }
+}
 
 .profile {
   max-width: 500px;
@@ -111,6 +121,16 @@ a {
 }
 .profile__img {
   max-width: 100%;
+}
+@media (max-width: 679px) {
+  .profile {
+    max-width: 350px;
+  }
+}
+@media (max-width: 476px) {
+  .profile {
+    max-width: 300px;
+  }
 }
 
 .intro {
@@ -147,6 +167,21 @@ a {
   color: #272727;
   border: 2px solid #3e464f;
   background-color: transparent;
+}
+@media (max-width: 679px) {
+  .intro {
+    min-width: initial;
+    max-width: initial;
+    text-align: center;
+    margin: 0 30px;
+  }
+  .intro__title {
+    font-size: 2rem;
+    margin-top: 60px;
+  }
+  .intro__text {
+    max-width: initial;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
