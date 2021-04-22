@@ -21,3 +21,9 @@
   src: url(./FiraCode-Regular.ttf);
   font-weight: 400;
 }
+
+@font-face {
+  font-family: 'Fira Mono';
+  src: url(./FiraMono-Bold.ttf);
+  font-weight: bold;
+}

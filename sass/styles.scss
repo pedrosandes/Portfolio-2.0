@@ -25,7 +25,7 @@ $font-xl: 3rem; // 48px
 @mixin center {
   //CENTRALIZA O CONTAINER
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -63,6 +63,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  color: $black;
 }
 
 ul {
@@ -71,6 +72,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: $black;
 }
 
 /* HEADER */
@@ -82,7 +84,7 @@ a {
   @media (max-width: 679px) {
     display: block;
 
-    .header-bg {
+    &-bg {
       @include flexbox(row, center, center);
       background-color: $gray;
       min-height: 100px;
@@ -94,25 +96,75 @@ a {
   @include flexbox(row, center, center);
   height: 70px;
 
-  .menu__list {
+  &__list {
     @include flexbox($init, $init, $init); // BASTA INCLUIR DISPLAY: FLEX;
+  }
+  &__link {
+    @include fonts('Antonio', $font-sm, 500);
+    letter-spacing: 3px;
+    padding: 25px;
+    text-transform: uppercase;
 
-    .menu__link {
-      @include fonts('Antonio', $font-sm, 500);
-      letter-spacing: 3px;
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 7px;
+    }
+
+    @media (max-width: 476px) {
+      letter-spacing: $init;
+      padding: 10px;
+    }
+  }
+}
+
+/* HOME */
+
+.home {
+  @include flexbox(row, space-between, center);
+  @include center();
+  margin: 80px auto;
+}
+
+.profile {
+  max-width: 500px;
+  min-width: 250px;
+
+  &__img {
+    max-width: 100%;
+  }
+}
+
+.intro {
+  // background-color: blue;
+  max-width: 432px;
+  min-width: 432px;
+
+  &__title {
+    @include fonts('Fira Mono', $font-xl, bold);
+  }
+
+  &__text {
+    @include fonts('Fira Code', $font-sm, 400);
+    line-height: 24px;
+    max-width: 303px;
+    margin: 22px 0 33px 0;
+  }
+
+  &__btn {
+    @include fonts('Fira Code', 1.375rem, 400);
+    padding: 13px 27px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid transparent;
+    color: $white;
+    background-color: $blue;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
       color: $black;
-      padding: 25px;
-      text-transform: uppercase;
-
-      &:hover {
-        text-decoration: underline;
-        text-underline-offset: 7px;
-      }
-
-      @media (max-width: 476px) {
-        letter-spacing: $init;
-        padding: 10px;
-      }
+      border: 2px solid $blue;
+      background-color: transparent;
     }
   }
 }

@@ -24,6 +24,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  color: #272727;
 }
 
 ul {
@@ -32,6 +33,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #272727;
 }
 
 /* HEADER */
@@ -41,7 +43,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   height: 100px;
 }
@@ -49,7 +51,7 @@ a {
   .header {
     display: block;
   }
-  .header .header-bg {
+  .header-bg {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,30 +68,85 @@ a {
   align-items: center;
   height: 70px;
 }
-.menu .menu__list {
+.menu__list {
   display: flex;
   flex-direction: initial;
   justify-content: initial;
   align-items: initial;
 }
-.menu .menu__list .menu__link {
+.menu__link {
   font-family: "Antonio";
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: 3px;
-  color: #272727;
   padding: 25px;
   text-transform: uppercase;
 }
-.menu .menu__list .menu__link:hover {
+.menu__link:hover {
   text-decoration: underline;
   text-underline-offset: 7px;
 }
 @media (max-width: 476px) {
-  .menu .menu__list .menu__link {
+  .menu__link {
     letter-spacing: initial;
     padding: 10px;
   }
+}
+
+/* HOME */
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin: 80px auto;
+}
+
+.profile {
+  max-width: 500px;
+  min-width: 250px;
+}
+.profile__img {
+  max-width: 100%;
+}
+
+.intro {
+  max-width: 432px;
+  min-width: 432px;
+}
+.intro__title {
+  font-family: "Fira Mono";
+  font-size: 3rem;
+  font-weight: bold;
+}
+.intro__text {
+  font-family: "Fira Code";
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 303px;
+  margin: 22px 0 33px 0;
+}
+.intro__btn {
+  font-family: "Fira Code";
+  font-size: 1.375rem;
+  font-weight: 400;
+  padding: 13px 27px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid transparent;
+  color: #fff;
+  background-color: #3e464f;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.intro__btn:hover {
+  color: #272727;
+  border: 2px solid #3e464f;
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */
