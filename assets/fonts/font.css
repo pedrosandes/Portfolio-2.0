@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Antonio';
+  src: url(./Antonio-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url(./FiraCode-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url(./FiraCode-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url(./FiraCode-Regular.ttf);
+  font-weight: 400;
+}
