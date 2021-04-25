@@ -68,8 +68,14 @@ $font-xl: 3rem; // 48px
   font-weight: $weight;
 }
 
+.title {
+  @include fonts('Fira Code', $font-lg, 500);
+  text-transform: uppercase;
+  text-align: center;
+}
+
 /* 
-  RESET
+  RESET 
 */
 
 * {
@@ -116,32 +122,32 @@ a {
       height: 100px;
     }
   }
-}
 
-.menu {
-  &__list {
-    @include flexbox($init, center, $init);
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    min-height: 80px;
-  }
-  &__link {
-    @include fonts('Antonio', $font-sm, 500);
-    letter-spacing: 3px;
-    padding: 25px;
-    text-transform: uppercase;
-
-    &:hover {
-      text-decoration: underline;
-      text-underline-offset: 7px;
+  .menu {
+    &__list {
+      @include flexbox($init, center, $init);
     }
 
-    @media (max-width: 476px) {
-      letter-spacing: $init;
-      padding: 10px;
+    &__item {
+      display: flex;
+      align-items: center;
+      min-height: 80px;
+    }
+    &__link {
+      @include fonts('Antonio', $font-sm, 500);
+      letter-spacing: 3px;
+      padding: 25px;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 7px;
+      }
+
+      @media (max-width: 476px) {
+        letter-spacing: $init;
+        padding: 10px;
+      }
     }
   }
 }
@@ -157,64 +163,64 @@ a {
     @include flexbox(column-reverse, $init, center);
     background-color: $gray;
   }
-}
 
-.profile {
-  max-width: 500px;
+  .profile {
+    max-width: 500px;
 
-  &__img {
-    max-width: 100%;
-  }
+    &__img {
+      max-width: 100%;
+    }
 
-  @media (max-width: 476px) {
-    width: 260px;
-  }
-}
-
-.intro {
-  max-width: 432px;
-
-  &__title {
-    @include fonts('Fira Mono', $font-xl, bold);
-  }
-
-  &__text {
-    @include fonts('Fira Code', $font-sm, 400);
-    line-height: 24px;
-    max-width: 303px;
-    margin: 22px 0 33px 0;
-  }
-
-  &__btn {
-    @include fonts('Fira Code', 1.375rem, 400);
-    padding: 13px 27px;
-    border-radius: 5px;
-    outline: none;
-    border: 2px solid transparent;
-    color: $white;
-    background-color: $blue;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover {
-      color: $black;
-      border: 2px solid $blue;
-      background-color: transparent;
+    @media (max-width: 476px) {
+      width: 260px;
     }
   }
 
-  @media (max-width: 679px) {
-    max-width: $init;
-    text-align: center;
-    margin: 0 20px;
+  .intro {
+    max-width: 432px;
 
     &__title {
-      font-size: $font-md;
-      margin-top: 60px;
+      @include fonts('Fira Mono', $font-xl, bold);
     }
 
     &__text {
+      @include fonts('Fira Code', $font-sm, 400);
+      line-height: 24px;
+      max-width: 303px;
+      margin: 22px 0 33px 0;
+    }
+
+    &__btn {
+      @include fonts('Fira Code', 1.375rem, 400);
+      padding: 13px 27px;
+      border-radius: 5px;
+      outline: none;
+      border: 2px solid transparent;
+      color: $white;
+      background-color: $blue;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: $black;
+        border: 2px solid $blue;
+        background-color: transparent;
+      }
+    }
+
+    @media (max-width: 679px) {
       max-width: $init;
+      text-align: center;
+      margin: 0 20px;
+
+      &__title {
+        font-size: $font-md;
+        margin-top: 60px;
+      }
+
+      &__text {
+        max-width: $init;
+      }
     }
   }
 }
@@ -225,36 +231,30 @@ a {
   max-width: 770px;
   margin: 80px auto;
   padding: 20px;
-}
 
-.title {
-  @include fonts('Fira Code', $font-lg, 500);
-  text-transform: uppercase;
-  text-align: center;
-}
+  .description {
+    margin: 0 10px;
 
-.description {
-  margin: 0 10px;
-
-  &__title {
-    @include fonts('Fira Code', $font-md, bold);
-    line-height: 49px;
-    margin: 44px 0 22px 0;
-  }
-
-  &__text {
-    @include fonts('Fira Code', $font-sm, 400);
-    line-height: 27.5px;
-
-    &:last-child {
-      margin: 0;
-    }
-  }
-
-  @media (max-width: 679px) {
     &__title {
-      font-size: 1.625rem;
-      line-height: 39.78px;
+      @include fonts('Fira Code', $font-md, bold);
+      line-height: 49px;
+      margin: 44px 0 22px 0;
+    }
+
+    &__text {
+      @include fonts('Fira Code', $font-sm, 400);
+      line-height: 27.5px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 679px) {
+      &__title {
+        font-size: 1.625rem;
+        line-height: 39.78px;
+      }
     }
   }
 }
@@ -264,22 +264,66 @@ a {
 .portfolio {
   @include center();
   padding: 20px;
-}
 
-.card-c {
-  @include flexbox(row, space-evenly, center);
-  flex-wrap: wrap;
+  .card-c {
+    @include flexbox(row, space-evenly, center);
+    flex-wrap: wrap;
 
-  &__card {
-    height: 300px;
-    width: 300px;
-    border-radius: 5px;
-    background-color: $blue;
-    margin-bottom: 50px;
+    .card {
+      height: 300px;
+      width: 300px;
+      border-radius: 5px;
+      background: linear-gradient($black, $blue);
+      margin-bottom: 50px;
 
-    @media (max-width: 439px) {
-      width: 250px;
-      height: 250px;
+      &__content {
+        opacity: 0;
+        visibility: hidden;
+        padding: 25px;
+        transition: all 0.4s ease;
+
+        h2 {
+          color: $white;
+        }
+
+        p {
+          color: $gray;
+          margin: 12px 0;
+        }
+
+        .btn {
+          background: $black;
+          color: $white;
+          border-radius: 5px;
+          outline: none;
+          border: 2px solid transparent;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: all 0.4s ease;
+
+          &:hover {
+            background-color: transparent;
+            color: $white;
+            border: 2px solid $white;
+          }
+        }
+
+        @media (max-width: 439px) {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      &:hover .card__content {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      @media (max-width: 439px) {
+        width: 250px;
+        height: 250px;
+      }
     }
   }
 }
@@ -290,16 +334,16 @@ a {
   @include center();
   max-width: 700px;
   margin: 30px auto 100px auto;
-}
 
-.redes {
-  @include flexbox(row, space-evenly, center);
-  flex-wrap: wrap;
+  .redes {
+    @include flexbox(row, space-evenly, center);
+    flex-wrap: wrap;
 
-  @media (max-width: 439px) {
-    flex-direction: column;
-    &__icon {
-      margin-bottom: 20px;
+    @media (max-width: 439px) {
+      flex-direction: column;
+      &__icon {
+        margin-bottom: 20px;
+      }
     }
   }
 }

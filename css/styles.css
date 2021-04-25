@@ -28,8 +28,16 @@
   margin: 10px auto;
 }
 
+.title {
+  font-family: "Fira Code";
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 /* 
-  RESET
+  RESET 
 */
 * {
   margin: 0;
@@ -85,19 +93,18 @@ a {
     height: 100px;
   }
 }
-
-.menu__list {
+.header .menu__list {
   display: flex;
   flex-direction: initial;
   justify-content: center;
   align-items: initial;
 }
-.menu__item {
+.header .menu__item {
   display: flex;
   align-items: center;
   min-height: 80px;
 }
-.menu__link {
+.header .menu__link {
   font-family: "Antonio";
   font-size: 1.125rem;
   font-weight: 500;
@@ -105,12 +112,12 @@ a {
   padding: 25px;
   text-transform: uppercase;
 }
-.menu__link:hover {
+.header .menu__link:hover {
   text-decoration: underline;
   text-underline-offset: 7px;
 }
 @media (max-width: 476px) {
-  .menu__link {
+  .header .menu__link {
     letter-spacing: initial;
     padding: 10px;
   }
@@ -136,28 +143,26 @@ a {
     background-color: #f5f5f5;
   }
 }
-
-.profile {
+.home .profile {
   max-width: 500px;
 }
-.profile__img {
+.home .profile__img {
   max-width: 100%;
 }
 @media (max-width: 476px) {
-  .profile {
+  .home .profile {
     width: 260px;
   }
 }
-
-.intro {
+.home .intro {
   max-width: 432px;
 }
-.intro__title {
+.home .intro__title {
   font-family: "Fira Mono";
   font-size: 3rem;
   font-weight: bold;
 }
-.intro__text {
+.home .intro__text {
   font-family: "Fira Code";
   font-size: 1.125rem;
   font-weight: 400;
@@ -165,7 +170,7 @@ a {
   max-width: 303px;
   margin: 22px 0 33px 0;
 }
-.intro__btn {
+.home .intro__btn {
   font-family: "Fira Code";
   font-size: 1.375rem;
   font-weight: 400;
@@ -178,22 +183,22 @@ a {
   text-transform: uppercase;
   cursor: pointer;
 }
-.intro__btn:hover {
+.home .intro__btn:hover {
   color: #272727;
   border: 2px solid #3e464f;
   background-color: transparent;
 }
 @media (max-width: 679px) {
-  .intro {
+  .home .intro {
     max-width: initial;
     text-align: center;
     margin: 0 20px;
   }
-  .intro__title {
+  .home .intro__title {
     font-size: 2rem;
     margin-top: 60px;
   }
-  .intro__text {
+  .home .intro__text {
     max-width: initial;
   }
 }
@@ -207,36 +212,27 @@ a {
   margin: 80px auto;
   padding: 20px;
 }
-
-.title {
-  font-family: "Fira Code";
-  font-size: 2.25rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.description {
+.sobre .description {
   margin: 0 10px;
 }
-.description__title {
+.sobre .description__title {
   font-family: "Fira Code";
   font-size: 2rem;
   font-weight: bold;
   line-height: 49px;
   margin: 44px 0 22px 0;
 }
-.description__text {
+.sobre .description__text {
   font-family: "Fira Code";
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 27.5px;
 }
-.description__text:last-child {
+.sobre .description__text:last-child {
   margin: 0;
 }
 @media (max-width: 679px) {
-  .description__title {
+  .sobre .description__title {
     font-size: 1.625rem;
     line-height: 39.78px;
   }
@@ -249,23 +245,59 @@ a {
   margin: 0 auto;
   padding: 20px;
 }
-
-.card-c {
+.portfolio .card-c {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
-.card-c__card {
+.portfolio .card-c .card {
   height: 300px;
   width: 300px;
   border-radius: 5px;
-  background-color: #3e464f;
+  background: linear-gradient(#272727, #3e464f);
   margin-bottom: 50px;
 }
+.portfolio .card-c .card__content {
+  opacity: 0;
+  visibility: hidden;
+  padding: 25px;
+  transition: all 0.4s ease;
+}
+.portfolio .card-c .card__content h2 {
+  color: #fff;
+}
+.portfolio .card-c .card__content p {
+  color: #f5f5f5;
+  margin: 12px 0;
+}
+.portfolio .card-c .card__content .btn {
+  background: #272727;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.portfolio .card-c .card__content .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
 @media (max-width: 439px) {
-  .card-c__card {
+  .portfolio .card-c .card__content p {
+    font-size: 0.8rem;
+  }
+}
+.portfolio .card-c .card:hover .card__content {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 439px) {
+  .portfolio .card-c .card {
     width: 250px;
     height: 250px;
   }
@@ -279,8 +311,7 @@ a {
   max-width: 700px;
   margin: 30px auto 100px auto;
 }
-
-.redes {
+.contato .redes {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -288,10 +319,10 @@ a {
   flex-wrap: wrap;
 }
 @media (max-width: 439px) {
-  .redes {
+  .contato .redes {
     flex-direction: column;
   }
-  .redes__icon {
+  .contato .redes__icon {
     margin-bottom: 20px;
   }
 }
