@@ -268,19 +268,20 @@ a {
   .card-c {
     @include flexbox(row, space-evenly, center);
     flex-wrap: wrap;
+    gap: 50px;
 
     .card {
       height: 300px;
       width: 300px;
       border-radius: 5px;
       background: linear-gradient($black, $blue);
-      margin-bottom: 50px;
 
       &__content {
-        opacity: 0;
-        visibility: hidden;
         padding: 25px;
         transition: all 0.4s ease;
+        height: 100%;
+        @include flexbox(column, center, flex-start);
+        gap: 10px;
 
         h2 {
           color: $white;
@@ -288,7 +289,6 @@ a {
 
         p {
           color: $gray;
-          margin: 12px 0;
         }
 
         .btn {
@@ -315,14 +315,9 @@ a {
         }
       }
 
-      &:hover .card__content {
-        opacity: 1;
-        visibility: visible;
-      }
-
       @media (max-width: 439px) {
         width: 250px;
-        height: 250px;
+        height: 300px;
       }
     }
   }
@@ -333,7 +328,7 @@ a {
 .contato {
   @include center();
   max-width: 700px;
-  margin: 30px auto 100px auto;
+  margin: 80px auto 100px auto;
 
   .redes {
     @include flexbox(row, space-evenly, center);
