@@ -1,177 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO -->
-    <meta
-      name="keywords"
-      content="frontend, desenvolvedor, web developer, developer"
-    />
-    <meta name="author" content="Pedro Sandes" />
-    <meta name="description" content="Meu site de apresentação de Portfólio." />
 
-    <!-- LINKS -->
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./assets/fonts/font.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Pedro Sandes</title>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header-bg">
-        <a href="#" class="logo">
-          <img src="./assets/img/logo.svg" alt="Logo de Pedro Sandes" />
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO -->
+  <meta name="keywords" content="frontend, desenvolvedor, web developer, developer" />
+  <meta name="author" content="Pedro Sandes" />
+  <meta name="description" content="Meu site de apresentação de Portfólio." />
+
+  <!-- LINKS -->
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/fonts/font.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Pedro Sandes</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-bg">
+      <a href="#" class="logo">
+        <img src="./assets/img/logo.svg" alt="Logo de Pedro Sandes" />
+      </a>
+    </div>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#home" class="menu__link">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#sobre" class="menu__link">Sobre</a>
+        </li>
+        <li class="menu__item">
+          <a href="#portfolio" class="menu__link">Portfólio</a>
+        </li>
+        <li class="menu__item">
+          <a href="#contato" class="menu__link">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="home-bg">
+    <div class="home">
+      <div class="intro">
+        <h1 class="intro__title">Olá! Meu nome é Pedro Sandes</h1>
+        <p class="intro__text">
+          Sou desenvolvedor FrontEnd e posso te ajudar.
+        </p>
+        <a href="#contato" class="intro__btn">Fale comigo</a>
       </div>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#home" class="menu__link">Home</a>
-          </li>
-          <li class="menu__item">
-            <a href="#sobre" class="menu__link">Sobre</a>
-          </li>
-          <li class="menu__item">
-            <a href="#portfolio" class="menu__link">Portfólio</a>
-          </li>
-          <li class="menu__item">
-            <a href="#contato" class="menu__link">Contato</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <!-- HOME -->
-    <section id="home" class="home-bg">
-      <div class="home">
-        <div class="intro">
-          <h1 class="intro__title">Olá! Meu nome é Pedro Sandes</h1>
-          <p class="intro__text">
-            Sou desenvolvedor FrontEnd e posso te ajudar.
+      <div class="profile">
+        <img class="profile__img" src="./assets/img/profile.png" alt="Foto de Pedro Sandes" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <h1 class="title lines">Sobre</h1>
+    <div class="description">
+      <h1 class="description__title">Quem sou eu?</h1>
+      <p class="description__text">
+        Me chamo Pedro Sandes, tenho 17 anos e sou desenvolvedor Front-end.
+      </p>
+
+      <h1 class="description__title">Como conheci o desenvolvimento Web?</h1>
+      <p class="description__text">
+        No início eu estudava apenas o UI/UX Design, que é a pessoa
+        responsável por fazer as telas do seu produto, seja ele Web ou mobile.
+        Porém com o tempo eu só fazia os projetos mas queria colocá-los em
+        prática, assim conheci as linguagens HTML e CSS, que me iniciou na
+        carreira de FrontEnd.
+      </p>
+
+      <h1 class="description__title">
+        Como você aprendeu a desenvolver os sites?
+      </h1>
+      <p class="description__text">
+        Meu irmão foi um grande incentivador para eu iniciar a minha carreira de
+        desenvolvedor Frontend. Ele me apresentou um curso remoto chamado
+        Estartando Devs,lá eles me orientaram e me ajudaram a dar os primeiros passos
+        definitivos da minha carreira. Sou muito grato a eles, pois eles me
+        deram um caminho a seguir e objetivos que foram alcançados.
+      </p>
+
+      <h1 class="description__title">O que eu utilizo para desenvolver?</h1>
+      <p class="description__text">
+        Tenho conhecimento em HTML, CSS, JavaScript e React. Constantemente
+        utilizo elas, são umas das tecnologias mais atualizadas do mercado e
+        vem em constante evolução.
+      </p>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="portfolio">
+    <h1 class="title lines">Portfólio</h1>
+    <div class="card-c">
+      <div class="card">
+        <div class="card__content">
+          <h2>Emoji Search</h2>
+          <p>
+            Esse é um projeto feito em React, para estudar sobre os estados no react, utilizando o hook de useState para
+            fazer o campo de busca e exibir o resultado.
           </p>
-          <a href="#contato" class="intro__btn">Fale comigo</a>
-        </div>
+          <a href="https://github.com/pedrosandes/emoji-search" target="_blank" class="btn">Saiba mais</a>
 
-        <div class="profile">
-          <img
-            class="profile__img"
-            src="./assets/img/profile.png"
-            alt="Foto de Pedro Sandes"
-          />
         </div>
       </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="sobre">
-      <h1 class="title lines">Sobre</h1>
-      <div class="description">
-        <h1 class="description__title">Quem sou eu?</h1>
-        <p class="description__text">
-          Me chamo Pedro Sandes, tenho 17 anos e sou desenvolvedor Front-end.
-        </p>
-
-        <h1 class="description__title">Como conheci o desenvolvimento Web?</h1>
-        <p class="description__text">
-          No início eu estudava apenas o UI/UX Design, que é a pessoa
-          responsável por fazer as telas do seu produto, seja ele Web ou mobile.
-          Porém com o tempo eu só fazia os projetos mas queria colocá-los em
-          prática, assim conheci as linguagens HTML e CSS, que me iniciou na
-          carreira de FrontEnd.
-        </p>
-
-        <h1 class="description__title">
-          Como você aprendeu a desenvolver os sites?
-        </h1>
-        <p class="description__text">
-          Meu irmão foi um grande incentivador para eu iniciar na carreira de
-          desenvolvedor Frontend, ele me apresentou um curso remoto que se chama
-          Estartando Devs, eles me orientaram e me ajudaram a iniciar
-          definitivamente minha carreira, e sou muito grato a eles, pois eles me
-          deram um caminho a seguir e objetivos que foram alcançados.
-        </p>
-
-        <h1 class="description__title">O que eu utilizo para desenvolver?</h1>
-        <p class="description__text">
-          Tenho conhecimento em HTML, CSS, JavaScript e React. Constantemente
-          utilizo elas, são umas das tecnologias mais atualizadas do mercado e
-          vem em constante evolução.
-        </p>
-      </div>
-    </section>
-
-    <!-- PORTFÓLIO -->
-    <section id="portfolio" class="portfolio">
-      <h1 class="title lines">Portfólio</h1>
-      <div class="card-c">
-        <div class="card">
-          <div class="card__content">
-            <h2>Emoji Search</h2>
-            <p>
-              Esse é um projeto feito em React, para estudar sobre os estados no react, utilizando o hook de useState para fazer o campo de busca e exibir o resultado.
-            </p>
-            <a href="https://github.com/pedrosandes/emoji-search" target="_blank" class="btn">Saiba mais</a>
-           
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__content">
-            <h2>Instagram Clone</h2>
-            <p>
-              Um clone do instagram feito para uma ativdade do curso estartando devs, porém o código é 100% feito por mim e organizado da maneira que eu queria, ele tem responsividade.
-            </p>
-            <a href="https://github.com/pedrosandes/clone-instagram" target="_blank" class="btn">Saiba mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__content">
-            <h2>Github Profiles</h2>
-            <p>
-              Esse é um projeto feito com a API do Github além de pegar as informações pessoais como nome, biográfia, seguidores, ela pega alguns repositórios.
-            </p>
-            <a href="https://github.com/pedrosandes/github-profiles" target="_blank" class="btn btn--margin">Saiba mais</a>
-          </div>
-        </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="contato">
-      <h1 class="title lines">Contato</h1>
-      <div class="redes">
-        <!-- GITHUB-->
-        <a href="https://github.com/pedrosandes" target="_blank" class="redes__icon">
-          <img src="./assets/img/github.svg" alt="Logo go github" />
-        </a>
-
-        <!-- INSTA -->
-        <a href="https://instagram.com/pedrosandesss" target="_blank" class="redes__icon">
-          <img src="./assets/img/insta.svg" alt="Logo do instagram" />
-        </a>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer-bg">
-      <div class="footer">
-        <div class="logo">
-          <a href="#"
-            ><img src="./assets/img/logo.svg" alt="Logo de Pedro Sandes"
-          /></a>
-        </div>
-        <div class="direitos">
-          <span>Todos os direitos reservados</span>
-        </div>
-        <div class="email">
-          <a href="https://github.com/pedrosandes" target="_blank">pedrosandes122@gmail.com</a>
+      <div class="card">
+        <div class="card__content">
+          <h2>Instagram Clone</h2>
+          <p>
+            Um clone do instagram feito para uma ativdade do curso estartando devs, porém o código é 100% feito por mim
+            e organizado da maneira que eu queria, ele tem responsividade.
+          </p>
+          <a href="https://github.com/pedrosandes/clone-instagram" target="_blank" class="btn">Saiba mais</a>
         </div>
       </div>
-    </footer>
-  </body>
+      <div class="card">
+        <div class="card__content">
+          <h2>Github Profiles</h2>
+          <p>
+            Esse é um projeto feito com a API do Github além de pegar as informações pessoais como nome, biográfia,
+            seguidores, ela pega alguns repositórios.
+          </p>
+          <a href="https://github.com/pedrosandes/github-profiles" target="_blank" class="btn btn--margin">Saiba
+            mais</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <h1 class="title lines">Contato</h1>
+    <div class="redes">
+      <!-- GITHUB-->
+      <a href="https://github.com/pedrosandes" target="_blank" class="redes__icon">
+        <img src="./assets/img/github.svg" alt="Logo go github" />
+      </a>
+
+      <!-- INSTA -->
+      <a href="https://instagram.com/pedrosandesss" target="_blank" class="redes__icon">
+        <img src="./assets/img/insta.svg" alt="Logo do instagram" />
+      </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg">
+    <div class="footer">
+      <div class="logo">
+        <a href="#"><img src="./assets/img/logo.svg" alt="Logo de Pedro Sandes" /></a>
+      </div>
+      <div class="direitos">
+        <span>Todos os direitos reservados</span>
+      </div>
+      <div class="email">
+        <a href="https://github.com/pedrosandes" target="_blank">pedrosandes122@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
